@@ -91,6 +91,13 @@ img { display: block; }
   margin: 0 auto 66px;
   text-align: center;
 }
+.hero-icon {
+  width: clamp(88px, 9vw, 112px);
+  height: auto;
+  margin: 0 auto 30px;
+  border-radius: 24%;
+  box-shadow: 0 20px 45px rgba(19, 70, 41, .18);
+}
 .eyebrow {
   margin: 0 0 20px;
   color: var(--deep-green);
@@ -152,8 +159,9 @@ h1 {
 .preview-brand div { display: flex; flex-direction: column; }
 .preview-brand strong { font-size: 14px; }
 .preview-brand span { margin-top: 2px; color: var(--muted); font-size: 10px; }
-.preview-nav { display: grid; gap: 7px; margin-top: 30px; }
-.preview-nav span { padding: 9px 10px; border-radius: 8px; color: #69736d; font-size: 11px; font-weight: 650; }
+.preview-brand img { object-fit: contain; }
+.preview-nav { display: grid; gap: 5px; margin-top: 24px; }
+.preview-nav span { padding: 8px 10px; border-radius: 8px; color: #69736d; font-size: 11px; font-weight: 650; }
 .preview-nav span.active { color: var(--deep-green); background: var(--pale-green); }
 .preview-nav i { display: inline-block; width: 20px; font-style: normal; text-align: center; }
 .preview-user { display: flex; align-items: center; gap: 9px; margin-top: auto; padding-top: 16px; border-top: 1px solid #edf0ee; font-size: 11px; }
@@ -165,7 +173,7 @@ h1 {
 .preview-heading small { margin-bottom: 5px; color: var(--muted); font-size: 10px; }
 .preview-heading strong { font-size: 20px; }
 .status-pill { padding: 7px 11px; border-radius: 30px; color: var(--deep-green); background: var(--pale-green); font-size: 10px; font-weight: 700; }
-.metric-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 22px; }
+.metric-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 22px; }
 .metric-grid article { padding: 16px; border: 1px solid #dce3df; border-radius: 10px; background: white; }
 .metric-grid span, .metric-grid small { display: block; color: var(--muted); font-size: 9px; }
 .metric-grid strong { display: block; margin: 7px 0 4px; color: var(--deep-green); font-size: 26px; }
@@ -205,8 +213,9 @@ h1 {
 }
 .section-heading > p:last-child { color: var(--muted); font-size: 18px; line-height: 1.55; }
 .feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
-.feature-grid article { min-height: 250px; padding: 34px 24px 12px; border-left: 1px solid var(--line); }
-.feature-grid article:first-child { padding-left: 0; border-left: 0; }
+.feature-grid article { min-height: 250px; padding: 34px 24px 24px; border-left: 1px solid var(--line); }
+.feature-grid article:nth-child(4n + 1) { padding-left: 0; border-left: 0; }
+.feature-grid article:nth-child(n + 5) { border-top: 1px solid var(--line); }
 .feature-number { color: var(--deep-green); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
 .feature-grid h3 { margin: 46px 0 14px; font-size: 20px; letter-spacing: -.025em; }
 .feature-grid p { color: var(--muted); font-size: 15px; line-height: 1.55; }
@@ -272,10 +281,14 @@ h1 {
   .preview-brand span, .preview-user span { display: none; }
   .preview-nav span { padding: 8px 5px; font-size: 9px; }
   .preview-main { padding: 20px; }
+  .metric-grid { grid-template-columns: repeat(2, 1fr); }
   .preview-panels { grid-template-columns: 1fr; }
   .score-panel { display: none !important; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
-  .feature-grid article:nth-child(3) { padding-left: 0; border-left: 0; }
+  .feature-grid article { border-top: 1px solid var(--line); }
+  .feature-grid article:nth-child(-n + 2) { border-top: 0; }
+  .feature-grid article:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .feature-grid article:nth-child(even) { padding-left: 24px; border-left: 1px solid var(--line); }
   .privacy-band { grid-template-columns: 1fr; gap: 28px; }
 }
 
@@ -303,7 +316,9 @@ h1 {
   .section { width: min(calc(100% - 32px), var(--max-width)); padding: 90px 0; }
   .section-heading { margin-bottom: 42px; }
   .feature-grid { grid-template-columns: 1fr; }
-  .feature-grid article, .feature-grid article:nth-child(3) { min-height: 0; padding: 28px 0 30px; border-left: 0; border-bottom: 1px solid var(--line); }
+  .feature-grid article,
+  .feature-grid article:nth-child(odd),
+  .feature-grid article:nth-child(even) { min-height: 0; padding: 28px 0 30px; border-top: 0; border-left: 0; border-bottom: 1px solid var(--line); }
   .feature-grid h3 { margin-top: 22px; }
   .privacy-band { padding: 80px 24px; }
   .disclaimer { padding: 78px 24px 82px; }

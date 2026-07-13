@@ -3,10 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="HSCompanion helps you manage risk assessments, workplace inspections, corrective actions and safety documents on iPad.">
+  <meta name="description" content="H&amp;S Companion brings incidents, risk assessments, inspections, actions, training, competency, analytics and safety documents together on iPad.">
   <meta name="theme-color" content="#0d8538">
-  <title>HSCompanion for iPad</title>
-  <link rel="icon" href="assets/app-mark.svg" type="image/svg+xml">
+  <meta property="og:title" content="H&amp;S Companion for iPad">
+  <meta property="og:description" content="A complete, adaptable health and safety workspace for iPad.">
+  <meta property="og:image" content="assets/app-icon.png">
+  <title>H&amp;S Companion for iPad</title>
+  <link rel="icon" href="assets/app-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -15,8 +19,8 @@
 
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="HSCompanion home">
-      <img src="assets/app-mark.svg" alt="" width="40" height="40">
-      <span>HSCompanion</span>
+      <img src="assets/app-icon.png" alt="" width="40" height="40">
+      <span>H&amp;S Companion</span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
       <span class="sr-only">Open navigation</span>
@@ -33,9 +37,10 @@
   <main id="main-content">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Risk, inspections and actions in one place</p>
-        <h1>Health &amp; safety,<br>kept moving.</h1>
-        <p class="hero-intro">Build clear risk assessments, carry out inspections and follow every corrective action from one focused iPad workspace.</p>
+        <img class="hero-icon" src="assets/app-icon.png" alt="H&amp;S Companion app icon" width="112" height="112">
+        <p class="eyebrow">A complete safety workspace for iPad</p>
+        <h1>Health &amp; safety,<br>working together.</h1>
+        <p class="hero-intro">Manage incidents, risk, inspections, actions, training and competence from one focused workspace—on site, at a desk or in Stage Manager.</p>
         <div class="button-row">
           <a class="button primary" href="#features">Explore the app</a>
           <a class="button secondary" href="support.html">Get support</a>
@@ -45,34 +50,36 @@
       <div class="app-preview" role="img" aria-label="Preview of the HSCompanion dashboard">
         <div class="preview-sidebar">
           <div class="preview-brand">
-            <img src="assets/app-mark.svg" alt="" width="42" height="42">
-            <div><strong>HSCompanion</strong><span>Safety workspace</span></div>
+            <img src="assets/brand-mark.png" alt="" width="42" height="42">
+            <div><strong>H&amp;S Companion</strong><span>Safety workspace</span></div>
           </div>
           <div class="preview-nav">
             <span class="active"><i>⌂</i> Dashboard</span>
+            <span><i>!</i> Incidents</span>
             <span><i>◆</i> Risk Assessments</span>
             <span><i>✓</i> Inspections</span>
             <span><i>○</i> Actions</span>
-            <span><i>□</i> Documents</span>
+            <span><i>⌁</i> Training</span>
           </div>
           <div class="preview-user"><b>DS</b><span>David<br><small>HSE Officer</small></span></div>
         </div>
         <div class="preview-main">
           <div class="preview-heading">
-            <div><small>Overview</small><strong>Good morning, David</strong></div>
+            <div><small>Dashboard</small><strong>Good morning, David</strong></div>
             <span class="status-pill">Holsworthy</span>
           </div>
           <div class="metric-grid">
-            <article><span>Open actions</span><strong>8</strong><small>3 due soon</small></article>
-            <article><span>Assessments</span><strong>12</strong><small>2 for review</small></article>
-            <article><span>Inspections</span><strong>6</strong><small>91% average</small></article>
+            <article><span>Incidents</span><strong>3</strong><small>1 to review</small></article>
+            <article><span>Risk</span><strong>12</strong><small>2 high risk</small></article>
+            <article><span>Inspections</span><strong>6</strong><small>2 findings</small></article>
+            <article><span>Actions</span><strong>8</strong><small>3 overdue</small></article>
           </div>
           <div class="preview-panels">
             <article class="activity-panel">
-              <div class="panel-title"><strong>Recent activity</strong><span>View all</span></div>
+              <div class="panel-title"><strong>Needs attention</strong><span>View all</span></div>
+              <div class="activity-row"><i class="amber-dot"></i><div><b>Heat stress assessment</b><small>Review due in 5 days</small></div><em>Review</em></div>
               <div class="activity-row"><i class="green-dot"></i><div><b>Workshop inspection</b><small>Completed today · 94%</small></div><em>Passed</em></div>
-              <div class="activity-row"><i class="amber-dot"></i><div><b>Welding bay assessment</b><small>Review due in 5 days</small></div><em>Review</em></div>
-              <div class="activity-row"><i class="green-dot"></i><div><b>Guarding corrective action</b><small>Closed yesterday</small></div><em>Closed</em></div>
+              <div class="activity-row"><i class="amber-dot"></i><div><b>Toolbox talk attendance</b><small>2 signatures outstanding</small></div><em>Training</em></div>
             </article>
             <article class="score-panel">
               <strong>Inspection score</strong>
@@ -86,15 +93,15 @@
 
     <section id="features" class="features section">
       <div class="section-heading">
-        <p class="eyebrow">Built for work on site</p>
+        <p class="eyebrow">Built for the whole safety workflow</p>
         <h2>Useful structure,<br>without the paperwork.</h2>
-        <p>HSCompanion keeps the record, the evidence and the next action connected. The detail is there when you need it, and quiet when you do not.</p>
+        <p>H&amp;S Companion keeps each record, its evidence and the next action connected. It adapts from full-screen iPad to compact Stage Manager windows without losing the work in front of you.</p>
       </div>
       <div class="feature-grid">
         <article>
           <span class="feature-number">01</span>
           <h3>Clear risk assessments</h3>
-          <p>Capture hazards, existing controls and further actions, then use a consistent 5 × 5 matrix to make risk easier to understand.</p>
+          <p>Capture hazards and controls, compare initial and residual risk on a 5 × 5 matrix, collect review signatures and create polished PDF reports.</p>
         </article>
         <article>
           <span class="feature-number">02</span>
@@ -108,19 +115,39 @@
         </article>
         <article>
           <span class="feature-number">04</span>
-          <h3>Reports ready to share</h3>
-          <p>Create readable PDF reports and save or share inspection evidence only when you choose a destination.</p>
+          <h3>Incident management</h3>
+          <p>Record what happened, who was affected, immediate controls, investigation details and whether an event may be reportable.</p>
+        </article>
+        <article>
+          <span class="feature-number">05</span>
+          <h3>Training with signatures</h3>
+          <p>Track toolbox talks, inductions and formal training, manage attendance and capture attendee, trainer or observer signatures.</p>
+        </article>
+        <article>
+          <span class="feature-number">06</span>
+          <h3>Competency made visible</h3>
+          <p>Define role requirements, connect people to teams and see where competence is current, due or needs attention.</p>
+        </article>
+        <article>
+          <span class="feature-number">07</span>
+          <h3>Analytics and reminders</h3>
+          <p>Use a live dashboard, KPI trends, search and device notifications to keep overdue work and upcoming reviews visible.</p>
+        </article>
+        <article>
+          <span class="feature-number">08</span>
+          <h3>Documents and Microsoft 365</h3>
+          <p>Create PDF reports, save locally, or optionally connect Microsoft 365 for OneDrive backup, SharePoint workflows and email summaries.</p>
         </article>
       </div>
     </section>
 
     <section class="privacy-band">
       <div>
-        <p class="eyebrow">Private by design</p>
-        <h2>Your safety records<br>stay on your device.</h2>
+        <p class="eyebrow">Local-first and protected</p>
+        <h2>Your records remain<br>under your control.</h2>
       </div>
       <div>
-        <p>HSCompanion stores assessments, inspections, actions, settings and evidence locally. Reports and photos leave the app only when you choose to save or share them.</p>
+        <p>Records are stored locally and can be protected with Face ID or your device passcode. External sharing, Microsoft 365 connection, SharePoint sync and scheduled backups are optional features that you configure and control.</p>
         <a href="privacy.html">Read the privacy policy <span aria-hidden="true">→</span></a>
       </div>
     </section>

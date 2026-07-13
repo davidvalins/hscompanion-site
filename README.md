@@ -1,6 +1,8 @@
-# HSCompanion website
+# H&S Companion website
 
-Static GitHub Pages website for HSCompanion.
+Static GitHub Pages website for H&S Companion. The site highlights the current
+iPad experience, including responsive Stage Manager layouts, safety records,
+signatures, reporting and optional Microsoft 365 workflows.
 
 ## Preview locally
 
@@ -14,10 +16,12 @@ Then open `http://localhost:8000`.
 
 ## Publish
 
-The Git repository currently has no remote configured. Once it is hosted on GitHub, publish this directory with a GitHub Pages action or move `docs` to the repository root and select **Deploy from a branch → main → /docs** in **Settings → Pages**.
+This directory is its own Git repository and publishes from the `main` branch of
+[`davidvalins/hscompanion-site`](https://github.com/davidvalins/hscompanion-site).
+After committing changes, push `main` to update the GitHub Pages deployment.
 
-The intended project URL is:
+The project URL is:
 
 ```text
-https://davidvalins.github.io/HSCompanion/
+https://davidvalins.github.io/hscompanion-site/
 ```
